@@ -10,7 +10,7 @@ function tree(dir){
         treeHelper(process.cwd(),"");
         return;
     }else{
-        let exist=fs.existSync(dir);
+        let exist=fs.existsSync(dir);
         if(!exist){
             console.log('given directory path is invalid please enter valid path');
         }else{

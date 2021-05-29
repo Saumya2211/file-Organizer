@@ -13,13 +13,13 @@ let command=inputA[0];
 
 switch(command){
     case "help":
-        helpObj.helpKey();
+        helpObj.helpKey(inputA[1]);
         break;
     case "organize":
         orgObj.orgKey(inputA[1]);
         break;
     case "tree":
-        treeObj.treekey(inputA[1]);
+        treeObj.treekey();
         break;
     default:
         console.log('please enter valid command');
