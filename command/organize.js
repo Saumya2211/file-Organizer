@@ -46,12 +46,13 @@ function sendFile(src,dest,category){
     // console.log(fileName);
     let finalName=path.join(destURL,fileName);
     fs.copyFileSync(src,finalName);
+    // fs.unlinkSync(src);
 }
 
 function getCat(file){
     let ext=path.extname(file).slice(1);
-    for(let type in utility){
-        let fileType=utility[type];
+    for(let type in utility.types){
+        let fileType=utility.types[type];
         for(let i=0;i<fileType.length;i++){
             if(fileType[i]==ext){
                 return type;
